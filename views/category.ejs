@@ -1,0 +1,20 @@
+<div class="intro">
+    <h1 class="intro__heading"><%= data.title%></h1>
+    <a href="/add-post?categoryId=<%=data._id %>" class="button">+ Add Post</a>
+  </div>
+  
+  <section class="articles">
+  
+    <ul class="article-ul">
+      <% posts.forEach(post => { %>
+        <li>
+          <a href="/post/<%= post._id %>">
+            <span><%= post.title %></span>            
+            <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+          </a>
+        </li>
+      <% }) %>
+    </ul>
+  
+  
+  </section>

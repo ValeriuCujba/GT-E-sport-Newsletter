@@ -1,0 +1,25 @@
+<h4 class="intro__heading">
+    <%= data.category %>
+</h4>
+<div class="admin-title">
+    <h2>
+        <%= data.title %>
+    </h2>
+    <div class="admin-post-controls">
+        <a href="/edit-post/<%= data._id %>" class="btn">Edit</a>
+
+        <form action="/delete-post/<%= data._id %>?_method=DELETE" method="POST">
+            <input type="submit" value="Delete" class="btn-delete btn">
+        </form>
+
+    </div>
+</div>
+
+<article class="article">
+    <%=data.body %>
+</article>
+<br>
+<hr>
+<h6>
+    <%= data.createdAt.toDateString() %>
+</h6>

@@ -1,0 +1,36 @@
+<div class="intro">
+  <h1 class="intro__heading">THE ULTIMATE E-SPORTS NEWSLETTER</h1>
+  <p class="intro__body">All E-Sports news in one place.</p>
+</div>
+
+<img src="/images/esports-gamer-hero-section.jpg" alt="E-sports gamer winning" class="hero-image" width="981"
+  height="628">
+<a
+  href="https://www.freepik.com/free-photo/professional-esports-gamer-back-side-view-rejoices-victory-generative-ai_43531588.htm#query=esports&position=1&from_view=search&track=sph">Image
+  by tohamina</a> on Freepik
+
+<section class="articles">
+  <h2 class="articles__heading">Latest Posts</h2>
+
+  <ul class="article-ul">
+
+    <% data.forEach(post=> { %>
+
+      <li>
+        <a href="/post/<%= post._id %>">
+          <span class="article-list__title"><%= post.title %></span>
+          <span class="article-list__category"><%= post.category %></span>
+          <span class="article-list__date"><%= post.createdAt.toDateString() %></span>
+        </a>
+      </li>
+      <% }) %>
+  </ul>
+
+
+
+  <% if (nextPage !== null) { %>
+    <a href="/?page=<%= nextPage %>" class="pagination">&lt; View Older Posts</a>
+  <% } %>
+
+
+</section>

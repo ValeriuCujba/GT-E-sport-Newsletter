@@ -20,6 +20,7 @@
     "method-override": "^3.0.0",
     "mongoose": "^7.2.4"
   }, 
+  "type": "module",
   "devDependencies": {
     "nodemon": "^2.0.22"
   }
